@@ -1,0 +1,40 @@
+# 💾 Android-specific
+*.iml
+.gradle/
+.idea/
+local.properties
+.DS_Store
+/captures/
+*.log
+
+# 📦 Gradle (исключение для wrapper)
+!/gradle/wrapper/gradle-wrapper.jar
+/build/
+*.war
+*.ear
+
+# 🔧 Generated files
+/.cxx/
+/.externalNativeBuild/
+/output.json
+*.keystore
+*.jks
+*.apk
+*.ap_
+
+# 🛠 Jetpack Compose Preview Cache
+.compose-cache/
+
+# 🌍 Firebase & API keys
+/google-services.json
+/firebase/
+crashlytics.properties
+app/google-services.json
+app/src/google-services.json
+serviceAccountKey.json
+
+# 🏗️ Miscellaneous
+/.vscode/
+/*.swp
+*.swo
+*.swn
