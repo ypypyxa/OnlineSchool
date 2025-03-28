@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -15,6 +16,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        viewBinding {
+            enable = true
+        }
     }
 
     buildTypes {
@@ -37,12 +42,50 @@ android {
 
 dependencies {
 
+    // Core Android libraries
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.activity)
+
+    // Material Design Components
+    implementation(libs.material)
+
+    // Navigation Component
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+
+
+    // Testing libraries
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Glide for image loading
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
+
+    // Gson for JSON parsing
+    implementation(libs.gson)
+
+    // Retrofit for networking
+    implementation(libs.retrofit)
+    implementation(libs.retrofit2.converter.gson)
+
+    // Dependency Injection with Koin
+    implementation(libs.koin.android)
+
+    // Fragment utilities
+    implementation(libs.androidx.fragment.ktx)
+
+    // ViewPager2 for swipeable views
+    implementation(libs.androidx.viewpager2)
+
+    // Kotlin Coroutines for asynchronous programming
+    implementation(libs.kotlinx.coroutines.android)
+
+    // Room for database management
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
 }
