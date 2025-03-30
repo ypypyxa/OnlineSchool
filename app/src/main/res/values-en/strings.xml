@@ -5,18 +5,26 @@
     <string name="profile">Profile</string>
 
     <!-- Onboarding -->
-    <string name="onboardTitle">thousands of courses\nin one peace</string>
-    <string name="continueButtonText">Continue</string>
-    <string name="oneSAdministration">1c Administration</string>
+    <string name="onboard_title">thousands of courses\nin one peace</string>
+    <string name="continue_button_text">Continue</string>
+    <string name="one_s_administration">1c Administration</string>
     <string name="traffic">Traffic</string>
-    <string name="contentMarketing">Content marketing</string>
-    <string name="bToBMarketing">B2B marketing</string>
-    <string name="googleAnalytics">Google Analytics</string>
-    <string name="uxResearcher">UX Researcher</string>
-    <string name="webAnalytics">Web Analytics</string>
-    <string name="gameDesign">Game Design</string>
-    <string name="webDesign">Web Design</string>
-    <string name="promptEngineering">Prompt Engineering</string>
+    <string name="content_marketing">Content marketing</string>
+    <string name="b_to_b_marketing">B2B marketing</string>
+    <string name="google_analytics">Google Analytics</string>
+    <string name="ux_researcher">UX Researcher</string>
+    <string name="web_analytics">Web Analytics</string>
+    <string name="game_design">Game Design</string>
+    <string name="web_design">Web Design</string>
+    <string name="prompt_engineering">Prompt Engineering</string>
     <string name="parsing">Parsing</string>
-    <string name="pythonDevelopment">Python Development</string>
+    <string name="python_development">Python Development</string>
+
+    <!-- Authorization -->
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="password_hint">Enter password</string>
+    <string name="no_account">No accaunt?</string>
+    <string name="registration">Registration</string>
+    <string name="forgot_my_password">Forgot my password</string>
 </resources>

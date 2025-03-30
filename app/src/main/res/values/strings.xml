@@ -7,24 +7,33 @@
     <string name="profile">Аккаунт</string>
     
     <!-- Onboarding -->
-    <string name="onboardTitle">Тысячи курсов\nв одном месте</string>
-    <string name="continueButtonText">Продолжить</string>
-    <string name="oneSAdministration">1c Администрирование</string>
-    <string name="rabbitMQ" translatable="false">RabbitMQ</string>
+    <string name="onboard_title">Тысячи курсов\nв одном месте</string>
+    <string name="continue_button_text">Продолжить</string>
+    <string name="one_s_administration">1c Администрирование</string>
+    <string name="rabbit_mq" translatable="false">RabbitMQ</string>
     <string name="traffic">Трафик</string>
-    <string name="contentMarketing">Контент маркетинг</string>
-    <string name="bToBMarketing">B2B маркетинг</string>
-    <string name="googleAnalytics">Google Аналитика</string>
-    <string name="uxResearcher">UX исследователь</string>
-    <string name="webAnalytics">Веб-аналитика</string>
-    <string name="bigData" translatable="false">Big Data</string>
-    <string name="gameDesign">Геймдизайн</string>
-    <string name="webDesign">Веб-дизайн</string>
-    <string name="cinemaFourD" translatable="false">Cinema 4D</string>
-    <string name="promptEngineering">Промпт инженеринг</string>
+    <string name="content_marketing">Контент маркетинг</string>
+    <string name="b_to_b_marketing">B2B маркетинг</string>
+    <string name="google_analytics">Google Аналитика</string>
+    <string name="ux_researcher">UX исследователь</string>
+    <string name="web_analytics">Веб-аналитика</string>
+    <string name="big_data" translatable="false">Big Data</string>
+    <string name="game_design">Геймдизайн</string>
+    <string name="web_design">Веб-дизайн</string>
+    <string name="cinema_four_d" translatable="false">Cinema 4D</string>
+    <string name="prompt_engineering">Промпт инженеринг</string>
     <string name="webflow" translatable="false">Webflow</string>
-    <string name="threeJS" translatable="false">Three.js</string>
+    <string name="three_js" translatable="false">Three.js</string>
     <string name="parsing">Парсинг</string>
-    <string name="pythonDevelopment">Python-разработка</string>
+    <string name="python_development">Python-разработка</string>
 
+    <!-- Authorization -->
+    <string name="login">Вход</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="emailHint" translatable="false">example@gmail.com</string>
+    <string name="password">Пароль</string>
+    <string name="password_hint">Введите пароль</string>
+    <string name="no_account">Нет аккаунта?</string>
+    <string name="registration">Регистрация</string>
+    <string name="forgot_my_password">Забыл пароль</string>
 </resources>

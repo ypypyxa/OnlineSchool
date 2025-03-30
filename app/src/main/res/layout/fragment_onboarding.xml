@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:clipChildren="false"
     android:clipToPadding="false"
-    android:background="?attr/colorPrimary"
     tools:context=".onboarding.ui.OnboardingFragment">
 
     <!-- Заголовок -->
@@ -15,8 +14,7 @@
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="32dp"
-        android:text="@string/onboardTitle"
+        android:text="@string/onboard_title"
         android:textFontWeight="400"
         android:layout_marginTop="100dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,6 +26,7 @@
         android:id="@+id/tagsContainer"
         android:layout_width="550dp"
         android:layout_height="0dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintTop_toBottomOf="@id/titleText"
         app:layout_constraintBottom_toTopOf="@id/continueButton"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
-            android:text="@string/oneSAdministration"
+            android:text="@string/one_s_administration"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp"
             android:background="@drawable/bg_tag_gray" />
@@ -49,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:elevation="-1dp"
-            android:text="@string/rabbitMQ"
+            android:text="@string/rabbit_mq"
             android:background="@drawable/bg_tag_green"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp"
@@ -75,7 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
-            android:text="@string/contentMarketing"
+            android:text="@string/content_marketing"
             android:background="@drawable/bg_tag_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
@@ -84,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
-            android:text="@string/bToBMarketing"
+            android:text="@string/b_to_b_marketing"
             android:background="@drawable/bg_tag_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
@@ -93,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
-            android:text="@string/googleAnalytics"
+            android:text="@string/google_analytics"
             android:background="@drawable/bg_tag_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
@@ -107,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
-            android:text="@string/uxResearcher"
+            android:text="@string/ux_researcher"
             android:background="@drawable/bg_tag_gray"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp" />
@@ -116,7 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
-            android:text="@string/webAnalytics"
+            android:text="@string/web_analytics"
             android:background="@drawable/bg_tag_gray"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp" />
@@ -126,7 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:elevation="-1dp"
-            android:text="@string/bigData"
+            android:text="@string/big_data"
             android:background="@drawable/bg_tag_green"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp"
@@ -143,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
-            android:text="@string/gameDesign"
+            android:text="@string/game_design"
             android:background="@drawable/bg_tag_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
@@ -152,7 +151,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
-            android:text="@string/webDesign"
+            android:text="@string/web_design"
             android:background="@drawable/bg_tag_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
@@ -161,7 +160,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
-            android:text="@string/cinemaFourD"
+            android:text="@string/cinema_four_d"
             android:background="@drawable/bg_tag_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
@@ -170,7 +169,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
-            android:text="@string/promptEngineering"
+            android:text="@string/prompt_engineering"
             android:background="@drawable/bg_tag_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
@@ -194,7 +193,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:elevation="-1dp"
-            android:text="@string/threeJS"
+            android:text="@string/three_js"
             android:background="@drawable/bg_tag_green"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp"
@@ -215,7 +214,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
-            android:text="@string/pythonDevelopment"
+            android:text="@string/python_development"
             android:background="@drawable/bg_tag_gray"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp" />
@@ -223,19 +222,14 @@
     </com.google.android.flexbox.FlexboxLayout>
 
     <!-- Кнопка "Продолжить" -->
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton style="@style/GreenButtonStyle"
         android:id="@+id/continueButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/default_margin_horizontal"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/bg_rounded_button_green"
-        android:fontFamily="@font/roboto_regular"
         android:paddingVertical="10dp"
-        android:text="@string/continueButtonText"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="14sp"
+        android:text="@string/continue_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
