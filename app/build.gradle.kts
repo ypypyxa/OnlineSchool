@@ -55,7 +55,6 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
-
     // Testing libraries
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -78,8 +77,16 @@ dependencies {
     // Fragment utilities
     implementation(libs.androidx.fragment.ktx)
 
+    // ViewModel
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
     // ViewPager2 for swipeable views
     implementation(libs.androidx.viewpager2)
+
+    // FlexboxLayout — позволяет удобно располагать элементы в стиле flex-wrap, как в CSS (для адаптивных тегов/чипов)
+    implementation(libs.flexbox)
 
     // Kotlin Coroutines for asynchronous programming
     implementation(libs.kotlinx.coroutines.android)

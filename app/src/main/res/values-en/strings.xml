@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home">Home</string>
+    <string name="favorites">Favorites</string>
+    <string name="profile">Profile</string>
+
+    <!-- Onboarding -->
+    <string name="onboardTitle">thousands of courses\nin one peace</string>
+    <string name="continueButtonText">Continue</string>
+    <string name="oneSAdministration">1c Administration</string>
+    <string name="traffic">Traffic</string>
+    <string name="contentMarketing">Content marketing</string>
+    <string name="bToBMarketing">B2B marketing</string>
+    <string name="googleAnalytics">Google Analytics</string>
+    <string name="uxResearcher">UX Researcher</string>
+    <string name="webAnalytics">Web Analytics</string>
+    <string name="gameDesign">Game Design</string>
+    <string name="webDesign">Web Design</string>
+    <string name="promptEngineering">Prompt Engineering</string>
+    <string name="parsing">Parsing</string>
+    <string name="pythonDevelopment">Python Development</string>
+</resources>
