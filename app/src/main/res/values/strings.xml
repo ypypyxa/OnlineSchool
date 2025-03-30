@@ -1,7 +1,30 @@
 <resources>
-    <string name="app_name">OnlineSchool</string>
+    <string name="app_name" translatable="false">OnlineSchool</string>
 
+    <!-- BottomMenu -->
     <string name="home">Главная</string>
     <string name="favorites">Избранное</string>
     <string name="profile">Аккаунт</string>
+    
+    <!-- Onboarding -->
+    <string name="onboardTitle">Тысячи курсов\nв одном месте</string>
+    <string name="continueButtonText">Продолжить</string>
+    <string name="oneSAdministration">1c Администрирование</string>
+    <string name="rabbitMQ" translatable="false">RabbitMQ</string>
+    <string name="traffic">Трафик</string>
+    <string name="contentMarketing">Контент маркетинг</string>
+    <string name="bToBMarketing">B2B маркетинг</string>
+    <string name="googleAnalytics">Google Аналитика</string>
+    <string name="uxResearcher">UX исследователь</string>
+    <string name="webAnalytics">Веб-аналитика</string>
+    <string name="bigData" translatable="false">Big Data</string>
+    <string name="gameDesign">Геймдизайн</string>
+    <string name="webDesign">Веб-дизайн</string>
+    <string name="cinemaFourD" translatable="false">Cinema 4D</string>
+    <string name="promptEngineering">Промпт инженеринг</string>
+    <string name="webflow" translatable="false">Webflow</string>
+    <string name="threeJS" translatable="false">Three.js</string>
+    <string name="parsing">Парсинг</string>
+    <string name="pythonDevelopment">Python-разработка</string>
+
 </resources>

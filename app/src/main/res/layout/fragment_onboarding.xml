@@ -1,15 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="?attr/colorPrimary"
     tools:context=".onboarding.ui.OnboardingFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Онбординг"
-        android:textSize="25sp"
-        android:gravity="center"/>
+    <!-- Заголовок -->
+    <TextView style="@style/TitleStyle"
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp"
+        android:text="@string/onboardTitle"
+        android:textFontWeight="400"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</FrameLayout>
+    <!-- FlexboxLayout с тегами -->
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/tagsContainer"
+        android:layout_width="550dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintBottom_toTopOf="@id/continueButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:flexWrap="wrap"
+        app:justifyContent="center">
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/oneSAdministration"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="20dp"
+            android:background="@drawable/bg_tag_gray" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:elevation="-1dp"
+            android:text="@string/rabbitMQ"
+            android:background="@drawable/bg_tag_green"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="20dp"
+            android:transformPivotX="90dp"
+            android:transformPivotY="30dp"
+            android:rotation="-15" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/traffic"
+            android:background="@drawable/bg_tag_gray"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="20dp" />
+
+        <!-- Принудительный перенос строки -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/contentMarketing"
+            android:background="@drawable/bg_tag_gray"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/bToBMarketing"
+            android:background="@drawable/bg_tag_gray"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/googleAnalytics"
+            android:background="@drawable/bg_tag_gray"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp" />
+
+        <!-- Принудительный перенос строки -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/uxResearcher"
+            android:background="@drawable/bg_tag_gray"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="20dp" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/webAnalytics"
+            android:background="@drawable/bg_tag_gray"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="20dp" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:elevation="-1dp"
+            android:text="@string/bigData"
+            android:background="@drawable/bg_tag_green"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="20dp"
+            android:transformPivotX="90dp"
+            android:transformPivotY="30dp"
+            android:rotation="15" />
+
+        <!-- Принудительный перенос строки -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/gameDesign"
+            android:background="@drawable/bg_tag_gray"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/webDesign"
+            android:background="@drawable/bg_tag_gray"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/cinemaFourD"
+            android:background="@drawable/bg_tag_gray"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/promptEngineering"
+            android:background="@drawable/bg_tag_gray"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp" />
+
+        <!-- Принудительный перенос строки -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/webflow"
+            android:background="@drawable/bg_tag_gray"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="20dp" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:elevation="-1dp"
+            android:text="@string/threeJS"
+            android:background="@drawable/bg_tag_green"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="20dp"
+            android:transformPivotX="10dp"
+            android:transformPivotY="25dp"
+            android:rotation="-15" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/parsing"
+            android:background="@drawable/bg_tag_gray"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="20dp" />
+
+        <TextView style="@style/TagStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/pythonDevelopment"
+            android:background="@drawable/bg_tag_gray"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="20dp" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <!-- Кнопка "Продолжить" -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/default_margin_horizontal"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/bg_rounded_button_green"
+        android:fontFamily="@font/roboto_regular"
+        android:paddingVertical="10dp"
+        android:text="@string/continueButtonText"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

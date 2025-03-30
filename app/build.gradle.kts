@@ -85,6 +85,9 @@ dependencies {
     // ViewPager2 for swipeable views
     implementation(libs.androidx.viewpager2)
 
+    // FlexboxLayout — позволяет удобно располагать элементы в стиле flex-wrap, как в CSS (для адаптивных тегов/чипов)
+    implementation(libs.flexbox)
+
     // Kotlin Coroutines for asynchronous programming
     implementation(libs.kotlinx.coroutines.android)
 
