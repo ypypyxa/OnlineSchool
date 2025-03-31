@@ -36,4 +36,13 @@
     <string name="no_account">Нет аккаунта?</string>
     <string name="registration">Регистрация</string>
     <string name="forgot_my_password">Забыл пароль</string>
+
+    <!-- Item course -->
+    <string name="add_to_favorites">Добавить в избранное</string>
+    <string name="read_more">Подробнее ➝</string>
+
+    <!-- Search courses -->
+    <string name="hint_search">Поиск курсов…</string>
+    <string name="filter_description">Фильтр</string>
+    <string name="by_date_added">По дате добавления</string>
 </resources>

@@ -27,4 +27,13 @@
     <string name="no_account">No accaunt?</string>
     <string name="registration">Registration</string>
     <string name="forgot_my_password">Forgot my password</string>
+
+    <!-- Item course -->
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="read_more">Read more ➝</string>
+
+    <!-- Search courses -->
+    <string name="hint_search">Search courses…</string>
+    <string name="filter_description">Filter</string>
+    <string name="by_date_added">By date added</string>
 </resources>

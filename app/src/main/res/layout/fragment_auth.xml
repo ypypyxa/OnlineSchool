@@ -5,7 +5,7 @@
     android:id="@+id/loginLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="16dp">
+    android:paddingHorizontal="@dimen/default_margin_horizontal">
 
     <!-- Заголовок -->
     <TextView style="@style/TitleStyle"
