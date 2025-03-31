@@ -10,6 +10,7 @@
     <color name="light_gray">#32333A</color>
     <color name="stroke">#4D555E</color>
     <color name="hint_gray">#929396</color>
+    <color name="hint_search_gray">#8B8C8E</color>
     <color name="description_gray">#B4B4B7</color>
     <color name="vk_blue">#2683ED</color>
 </resources>
