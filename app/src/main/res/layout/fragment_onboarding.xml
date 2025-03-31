@@ -41,7 +41,7 @@
             android:text="@string/one_s_administration"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp"
-            android:background="@drawable/bg_tag_gray" />
+            android:background="@drawable/bg_rounded_gray" />
 
         <TextView style="@style/TagStyle"
             android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
             android:layout_marginHorizontal="2dp"
             android:elevation="-1dp"
             android:text="@string/rabbit_mq"
-            android:background="@drawable/bg_tag_green"
+            android:background="@drawable/bg_rounded_green"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp"
             android:transformPivotX="90dp"
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:text="@string/traffic"
-            android:background="@drawable/bg_tag_gray"
+            android:background="@drawable/bg_rounded_gray"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp" />
 
@@ -75,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:text="@string/content_marketing"
-            android:background="@drawable/bg_tag_gray"
+            android:background="@drawable/bg_rounded_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
 
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:text="@string/b_to_b_marketing"
-            android:background="@drawable/bg_tag_gray"
+            android:background="@drawable/bg_rounded_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
 
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:text="@string/google_analytics"
-            android:background="@drawable/bg_tag_gray"
+            android:background="@drawable/bg_rounded_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
 
@@ -107,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:text="@string/ux_researcher"
-            android:background="@drawable/bg_tag_gray"
+            android:background="@drawable/bg_rounded_gray"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp" />
 
@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:text="@string/web_analytics"
-            android:background="@drawable/bg_tag_gray"
+            android:background="@drawable/bg_rounded_gray"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp" />
 
@@ -126,7 +126,7 @@
             android:layout_marginHorizontal="2dp"
             android:elevation="-1dp"
             android:text="@string/big_data"
-            android:background="@drawable/bg_tag_green"
+            android:background="@drawable/bg_rounded_green"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp"
             android:transformPivotX="90dp"
@@ -143,7 +143,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:text="@string/game_design"
-            android:background="@drawable/bg_tag_gray"
+            android:background="@drawable/bg_rounded_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
 
@@ -152,7 +152,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:text="@string/web_design"
-            android:background="@drawable/bg_tag_gray"
+            android:background="@drawable/bg_rounded_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
 
@@ -161,7 +161,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:text="@string/cinema_four_d"
-            android:background="@drawable/bg_tag_gray"
+            android:background="@drawable/bg_rounded_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
 
@@ -170,7 +170,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:text="@string/prompt_engineering"
-            android:background="@drawable/bg_tag_gray"
+            android:background="@drawable/bg_rounded_gray"
             android:paddingHorizontal="20dp"
             android:paddingVertical="16dp" />
 
@@ -184,7 +184,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:text="@string/webflow"
-            android:background="@drawable/bg_tag_gray"
+            android:background="@drawable/bg_rounded_gray"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp" />
 
@@ -194,7 +194,7 @@
             android:layout_marginHorizontal="2dp"
             android:elevation="-1dp"
             android:text="@string/three_js"
-            android:background="@drawable/bg_tag_green"
+            android:background="@drawable/bg_rounded_green"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp"
             android:transformPivotX="10dp"
@@ -206,7 +206,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:text="@string/parsing"
-            android:background="@drawable/bg_tag_gray"
+            android:background="@drawable/bg_rounded_gray"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp" />
 
@@ -215,7 +215,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="2dp"
             android:text="@string/python_development"
-            android:background="@drawable/bg_tag_gray"
+            android:background="@drawable/bg_rounded_gray"
             android:paddingHorizontal="24dp"
             android:paddingVertical="20dp" />
 
