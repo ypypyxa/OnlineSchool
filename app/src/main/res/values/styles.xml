@@ -13,7 +13,6 @@
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">14sp</item>
-        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="AuthLabelStyle">
@@ -33,6 +32,8 @@
         <item name="android:hint">@string/emailHint</item>
         <item name="android:background">@drawable/bg_rounded_edit_text_auth</item>
         <item name="android:textColorHint">@color/hint_gray</item>
+        <item name="android:inputType">textEmailAddress</item>
+
     </style>
 
     <style name="GreenButtonStyle">
@@ -42,6 +43,33 @@
         <item name="android:textSize">14sp</item>
         <item name="android:background">@drawable/bg_rounded_button_green</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AlertDialogStyle">
+        <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialogText</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertBodyText</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveMaterialAlertButtonText</item>
+        <item name="buttonBarNegativeButtonStyle">@style/MaterialAlertButtonText</item>
+
+        <item name="android:backgroundTint">#F232333A</item>
+    </style>
+
+    <style name="MaterialAlertDialogText" parent="@style/MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MaterialAlertBodyText" parent="MaterialAlertDialog.Material3.Body.Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:maxEms">25</item>
+    </style>
+
+    <style name="PositiveMaterialAlertButtonText" parent="@style/Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MaterialAlertButtonText" parent="@style/Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/white</item>
     </style>
 
 </resources>
