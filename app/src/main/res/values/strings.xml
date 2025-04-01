@@ -45,4 +45,12 @@
     <string name="hint_search">Поиск курсов…</string>
     <string name="filter_description">Фильтр</string>
     <string name="by_date_added">По дате добавления</string>
+
+    <!-- Alert Dialog -->
+    <string name="dialog_title">Упс!</string>
+    <string name="dialog_message">Раздел находится в разработке, попробуйте позже.</string>
+    <string name="dialog_dismiss">Понятно</string>
+
+    <!-- Profile Placeholder -->
+    <string name="oops">Упс! Кажется ты рано</string>
 </resources>

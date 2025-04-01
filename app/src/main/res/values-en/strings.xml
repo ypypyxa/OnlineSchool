@@ -36,4 +36,12 @@
     <string name="hint_search">Search courses…</string>
     <string name="filter_description">Filter</string>
     <string name="by_date_added">By date added</string>
+
+    <!-- Alert Dialog -->
+    <string name="dialog_title">Oops!</string>
+    <string name="dialog_message">The section is under development, please try again later.</string>
+    <string name="dialog_dismiss">Got it</string>
+
+    <!-- Profile Placeholder -->
+    <string name="oops">Oops! It seems you\'re early</string>
 </resources>
