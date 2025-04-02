@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.core.net.toUri
 import androidx.core.widget.doAfterTextChanged
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.pivnoydevelopment.onlineschool.R
 import com.pivnoydevelopment.onlineschool.databinding.FragmentAuthBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -76,25 +75,11 @@ class AuthFragment : Fragment() {
             findNavController().navigate(R.id.action_authFragment_to_searchFragment)
         }
 
-        binding.forgotPassword.setOnClickListener {
-            showDialog()
-        }
-
     }
 
     private fun setupObservers() {
         viewModel.isLoginEnabled.observe(viewLifecycleOwner) { enabled ->
             binding.loginButton.isEnabled = enabled
         }
-    }
-
-    private fun showDialog() {
-        MaterialAlertDialogBuilder(requireContext(), R.style.AlertDialogStyle)
-            .setTitle(requireContext().getString(R.string.dialog_title))
-            .setMessage(requireContext().getString(R.string.dialog_message))
-            .setPositiveButton(requireContext().getString(R.string.dialog_dismiss)) { dialog, _ ->
-                dialog.dismiss()
-            }
-            .show()
     }
 }

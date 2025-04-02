@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/coursesFragment"
-        android:name="com.pivnoydevelopment.onlineschool.search.ui.CoursesFragment"
+        android:name="com.pivnoydevelopment.onlineschool.courses.ui.CoursesFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_courses" />
     <fragment

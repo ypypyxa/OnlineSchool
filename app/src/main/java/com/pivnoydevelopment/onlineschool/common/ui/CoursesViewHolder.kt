@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.pivnoydevelopment.onlineschool.R
 import com.pivnoydevelopment.onlineschool.common.domain.models.Course
+import com.pivnoydevelopment.onlineschool.common.utils.DateConverter
 
 class CoursesViewHolder(
     parent: ViewGroup,
@@ -16,6 +17,9 @@ class CoursesViewHolder(
         LayoutInflater.from(parent.context)
             .inflate(R.layout.item_course, parent, false)
         ) {
+    companion object {
+        private const val CURRENCY = " ₽"
+    }
 
     var title: TextView = itemView.findViewById(R.id.title)
     var description: TextView = itemView.findViewById(R.id.description)
@@ -25,13 +29,25 @@ class CoursesViewHolder(
     var date: TextView = itemView.findViewById(R.id.date)
     var more: TextView = itemView.findViewById(R.id.more)
 
+    var banner: ImageView = itemView.findViewById(R.id.imageBanner)
+
     fun bind(course: Course) {
 
         title.text = course.title
         description.text = course.text
-        price.text = course.price
+        val priceWithCurrency = course.price + CURRENCY
+        price.text = (priceWithCurrency)
         rate.text = course.rate
-        date.text = course.startDate
+        val correctedDate = DateConverter.convertDate(course.startDate)
+        date.text = correctedDate
+
+        when (course.id) {
+            100 -> banner.setImageDrawable(itemView.context.getDrawable(R.drawable.img_banner_java))
+            101 -> banner.setImageDrawable(itemView.context.getDrawable(R.drawable.img_banner_three_d_generalist))
+            102 -> banner.setImageDrawable(itemView.context.getDrawable(R.drawable.img_banner_python))
+            103 -> banner.setImageDrawable(itemView.context.getDrawable(R.drawable.img_banner_system_analyst))
+            else -> banner.setImageDrawable(itemView.context.getDrawable(R.drawable.img_banner_data_analyst))
+        }
 
         inFavoriteToggle.setImageDrawable(getFavoriteToggleDrawable(course.hasLike))
         inFavoriteToggle.setOnClickListener { clickListener.onFavoriteToggleClick(course) }

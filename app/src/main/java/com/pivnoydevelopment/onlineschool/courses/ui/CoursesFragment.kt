@@ -1,4 +1,4 @@
-package com.pivnoydevelopment.onlineschool.search.ui
+package com.pivnoydevelopment.onlineschool.courses.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.pivnoydevelopment.onlineschool.R
 import com.pivnoydevelopment.onlineschool.common.domain.models.Course
 import com.pivnoydevelopment.onlineschool.common.ui.CoursesAdapter
 import com.pivnoydevelopment.onlineschool.databinding.FragmentCoursesBinding
-import com.pivnoydevelopment.onlineschool.search.ui.model.CoursesFragmentState
+import com.pivnoydevelopment.onlineschool.courses.ui.model.CoursesFragmentState
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CoursesFragment : Fragment() {
@@ -34,14 +34,15 @@ class CoursesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupViews()
+        setupListeners()
         setupObservers()
-        viewModel.loadCourses()
     }
 
     private fun setupViews() {
         adapter = CoursesAdapter (
             object : CoursesAdapter.CoursesClickListener {
                 override fun onDetailsClick() {
+                    showDialog()
                     showToast(requireContext().getString(R.string.dialog_message))
                 }
 
@@ -51,12 +52,13 @@ class CoursesFragment : Fragment() {
             }
         )
 
-        binding.recyclerView.layoutManager = LinearLayoutManager(
-            requireContext(),
-            LinearLayoutManager.VERTICAL,
-            false
-        )
         binding.recyclerView.adapter = adapter
+    }
+
+    private fun setupListeners() {
+        binding.sortButton.setOnClickListener {
+            viewModel.sort()
+        }
     }
 
     private fun setupObservers() {
@@ -81,12 +83,14 @@ class CoursesFragment : Fragment() {
             is CoursesFragmentState.Empty -> showEmpty(state.message)
             is CoursesFragmentState.Error -> showError(state.errorMessage)
             is CoursesFragmentState.Loading -> showLoading()
+            is CoursesFragmentState.Sort -> sort(state.courses)
         }
     }
 
     fun showLoading() {
         binding.recyclerView.visibility = View.GONE
         binding.progressBar.visibility = View.VISIBLE
+        binding.sortButton.isEnabled = false
     }
 
     fun showError(errorMessage: String) {
@@ -102,9 +106,26 @@ class CoursesFragment : Fragment() {
     fun showContent(courses: List<Course>) {
         binding.recyclerView.visibility = View.VISIBLE
         binding.progressBar.visibility = View.GONE
+        binding.sortButton.isEnabled = true
 
         adapter?.courses?.clear()
         adapter?.courses?.addAll(courses)
         adapter?.notifyDataSetChanged()
+    }
+
+    fun sort(courses: List<Course>) {
+        adapter?.courses?.clear()
+        adapter?.courses?.addAll(courses)
+        adapter?.notifyDataSetChanged()
+    }
+
+    private fun showDialog() {
+        MaterialAlertDialogBuilder(requireContext(), R.style.AlertDialogStyle)
+            .setTitle(requireContext().getString(R.string.dialog_title))
+            .setMessage(requireContext().getString(R.string.dialog_message))
+            .setPositiveButton(requireContext().getString(R.string.dialog_dismiss)) { dialog, _ ->
+                dialog.dismiss()
+            }
+            .show()
     }
 }

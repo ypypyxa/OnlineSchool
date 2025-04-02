@@ -1,6 +1,5 @@
-package com.pivnoydevelopment.onlineschool.search.ui
+package com.pivnoydevelopment.onlineschool.courses.ui
 
-import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
@@ -9,16 +8,14 @@ import androidx.lifecycle.viewModelScope
 import com.pivnoydevelopment.onlineschool.common.domain.api.CoursesInteractor
 import com.pivnoydevelopment.onlineschool.common.domain.models.Course
 import com.pivnoydevelopment.onlineschool.common.utils.SingleLiveEvent
-import com.pivnoydevelopment.onlineschool.search.ui.model.CoursesFragmentState
+import com.pivnoydevelopment.onlineschool.courses.ui.model.CoursesFragmentState
 import kotlinx.coroutines.launch
 
 class CoursesViewModel(
     private val coursesInteractor: CoursesInteractor,
 ) : ViewModel() {
 
-//    init {
-//        loadCourses()
-//    }
+    private var courses = listOf<Course>()
 
     private val _showToast = SingleLiveEvent<String>()
     fun observeShowToast(): LiveData<String> = _showToast
@@ -33,15 +30,28 @@ class CoursesViewModel(
                 is CoursesFragmentState.Empty -> coursesFragmentState
                 is CoursesFragmentState.Error -> coursesFragmentState
                 is CoursesFragmentState.Loading -> coursesFragmentState
+                is CoursesFragmentState.Sort -> CoursesFragmentState.Sort(coursesFragmentState.courses)
             }
         }
+    }
+
+    init {
+        loadCourses()
+    }
+
+    fun sort() {
+        renderState(
+            CoursesFragmentState.Sort(
+                courses = courses.sortedByDescending { it.publishDate }
+            )
+        )
     }
 
     private fun renderState(state: CoursesFragmentState) {
         _stateLiveData.postValue(state)
     }
 
-    fun loadCourses() {
+    private fun loadCourses() {
         renderState(CoursesFragmentState.Loading)
 
         viewModelScope.launch {
@@ -78,6 +88,7 @@ class CoursesViewModel(
             }
 
             else -> {
+                this.courses = courses
                 renderState(
                     CoursesFragmentState.Content(
                         courses = courses

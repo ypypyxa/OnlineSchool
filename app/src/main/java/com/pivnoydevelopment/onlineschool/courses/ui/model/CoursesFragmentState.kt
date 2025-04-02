@@ -1,4 +1,4 @@
-package com.pivnoydevelopment.onlineschool.search.ui.model
+package com.pivnoydevelopment.onlineschool.courses.ui.model
 
 import com.pivnoydevelopment.onlineschool.common.domain.models.Course
 
@@ -15,5 +15,9 @@ sealed interface CoursesFragmentState {
 
     data class Empty(
         val message: String
+    ) : CoursesFragmentState
+
+    data class Sort(
+        val courses: List<Course>
     ) : CoursesFragmentState
 }
