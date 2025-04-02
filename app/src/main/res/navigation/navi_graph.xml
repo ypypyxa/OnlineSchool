@@ -14,8 +14,8 @@
             android:id="@+id/action_onboardingFragment_to_authFragment"
             app:destination="@id/authFragment" />
         <action
-            android:id="@+id/action_onboardingFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
+            android:id="@+id/action_onboardingFragment_to_coursesFragment"
+            app:destination="@id/coursesFragment" />
     </fragment>
     <fragment
         android:id="@+id/authFragment"
@@ -24,13 +24,13 @@
         tools:layout="@layout/fragment_auth" >
         <action
             android:id="@+id/action_authFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
+            app:destination="@id/coursesFragment" />
     </fragment>
     <fragment
-        android:id="@+id/searchFragment"
-        android:name="com.pivnoydevelopment.onlineschool.search.ui.SearchFragment"
+        android:id="@+id/coursesFragment"
+        android:name="com.pivnoydevelopment.onlineschool.courses.ui.CoursesFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_courses" />
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.pivnoydevelopment.onlineschool.favorites.ui.FavoritesFragment"

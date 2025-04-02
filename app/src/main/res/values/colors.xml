@@ -7,6 +7,7 @@
     <color name="dark_gray">#24252A</color>
     <color name="green">#12B956</color>
     <color name="glass">#32333A4D</color>
+    <color name="dark_glass">#CC24252A</color>
     <color name="light_gray">#32333A</color>
     <color name="stroke">#4D555E</color>
     <color name="hint_gray">#929396</color>
