@@ -3,7 +3,7 @@ package com.pivnoydevelopment.onlineschool.common.data.network
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import com.pivnoydevelopment.onlineschool.common.NetworkClient
+import com.pivnoydevelopment.onlineschool.common.data.NetworkClient
 import com.pivnoydevelopment.onlineschool.common.data.dto.CoursesRequest
 import com.pivnoydevelopment.onlineschool.common.data.dto.Response
 import kotlinx.coroutines.Dispatchers

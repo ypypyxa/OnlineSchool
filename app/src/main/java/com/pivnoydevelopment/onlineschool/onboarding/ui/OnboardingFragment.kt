@@ -42,7 +42,7 @@ class OnboardingFragment : Fragment() {
         viewModel.navigateTo.observe(viewLifecycleOwner) { destination ->
             when (destination) {
                 Destination.SEARCH -> {
-                    findNavController().navigate(R.id.action_onboardingFragment_to_searchFragment)
+                    findNavController().navigate(R.id.action_onboardingFragment_to_coursesFragment)
                 }
                 null -> { }
             }

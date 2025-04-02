@@ -1,11 +1,10 @@
 package com.pivnoydevelopment.onlineschool.common.data
 
-import com.pivnoydevelopment.onlineschool.common.NetworkClient
 import com.pivnoydevelopment.onlineschool.common.data.dto.CoursesRequest
 import com.pivnoydevelopment.onlineschool.common.data.dto.CoursesResponse
 import com.pivnoydevelopment.onlineschool.common.domain.api.CoursesRepository
 import com.pivnoydevelopment.onlineschool.common.domain.models.Course
-import com.pivnoydevelopment.onlineschool.utils.Resource
+import com.pivnoydevelopment.onlineschool.common.utils.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 

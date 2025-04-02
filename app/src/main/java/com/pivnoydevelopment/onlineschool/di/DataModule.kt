@@ -2,7 +2,7 @@ package com.pivnoydevelopment.onlineschool.di
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.pivnoydevelopment.onlineschool.common.NetworkClient
+import com.pivnoydevelopment.onlineschool.common.data.NetworkClient
 import com.pivnoydevelopment.onlineschool.common.data.network.GoogleDiskApi
 import com.pivnoydevelopment.onlineschool.common.data.network.RetrofitNetworkClient
 import com.pivnoydevelopment.onlineschool.common.data.storage.LocalStorage

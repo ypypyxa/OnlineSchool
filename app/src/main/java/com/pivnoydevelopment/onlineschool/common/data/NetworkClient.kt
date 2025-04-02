@@ -1,4 +1,4 @@
-package com.pivnoydevelopment.onlineschool.common
+package com.pivnoydevelopment.onlineschool.common.data
 
 import com.pivnoydevelopment.onlineschool.common.data.dto.Response
 

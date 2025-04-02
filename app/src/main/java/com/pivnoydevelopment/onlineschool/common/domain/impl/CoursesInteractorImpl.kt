@@ -3,7 +3,7 @@ package com.pivnoydevelopment.onlineschool.common.domain.impl
 import com.pivnoydevelopment.onlineschool.common.domain.api.CoursesInteractor
 import com.pivnoydevelopment.onlineschool.common.domain.api.CoursesRepository
 import com.pivnoydevelopment.onlineschool.common.domain.models.Course
-import com.pivnoydevelopment.onlineschool.utils.Resource
+import com.pivnoydevelopment.onlineschool.common.utils.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
