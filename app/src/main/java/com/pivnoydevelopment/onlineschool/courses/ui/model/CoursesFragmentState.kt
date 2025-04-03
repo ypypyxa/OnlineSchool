@@ -1,6 +1,6 @@
 package com.pivnoydevelopment.onlineschool.courses.ui.model
 
-import com.pivnoydevelopment.onlineschool.common.domain.models.Course
+import com.pivnoydevelopment.common.domain.models.Course
 
 sealed interface CoursesFragmentState {
     object Loading : CoursesFragmentState

@@ -3,7 +3,7 @@ package com.pivnoydevelopment.onlineschool.authorization.ui
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.pivnoydevelopment.onlineschool.common.domain.storage.api.LoginInteractor
+import com.pivnoydevelopment.common.domain.storage.api.LoginInteractor
 
 class AuthViewModel(private val loginInteractor: LoginInteractor) : ViewModel() {
 

@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.pivnoydevelopment.onlineschool.common.domain.db.api.FavoritesCoursesInteractor
-import com.pivnoydevelopment.onlineschool.common.domain.models.Course
+import com.pivnoydevelopment.common.domain.db.api.FavoritesCoursesInteractor
+import com.pivnoydevelopment.common.domain.models.Course
 import com.pivnoydevelopment.onlineschool.favorites.ui.model.FavoritesFragmentState
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.pivnoydevelopment.onlineschool.R
 import com.pivnoydevelopment.onlineschool.databinding.FragmentOnboardingBinding
-import com.pivnoydevelopment.onlineschool.onboarding.model.Destination
+import com.pivnoydevelopment.onlineschool.onboarding.ui.model.Destination
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 

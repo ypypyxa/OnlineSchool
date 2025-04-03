@@ -3,7 +3,7 @@ package com.pivnoydevelopment.onlineschool.common.ui
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.pivnoydevelopment.onlineschool.common.domain.models.Course
+import com.pivnoydevelopment.common.domain.models.Course
 
 class CoursesAdapter(private val clickListener: CoursesClickListener) : RecyclerView.Adapter<CoursesViewHolder>() {
 

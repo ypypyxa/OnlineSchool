@@ -1,7 +1,7 @@
 package com.pivnoydevelopment.onlineschool.common.ui
 
 import androidx.recyclerview.widget.DiffUtil
-import com.pivnoydevelopment.onlineschool.common.domain.models.Course
+import com.pivnoydevelopment.common.domain.models.Course
 
 class CoursesDiffCallback(
     private val oldList: List<Course>,
