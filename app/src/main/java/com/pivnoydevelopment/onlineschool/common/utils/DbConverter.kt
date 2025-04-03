@@ -13,7 +13,7 @@ class DbConverter {
             price = course.price,
             rate = course.rate,
             startDate = course.startDate,
-            hasLike = course.hasLike,
+            hasLike = true,
             publishDate = course.publishDate
         )
     }

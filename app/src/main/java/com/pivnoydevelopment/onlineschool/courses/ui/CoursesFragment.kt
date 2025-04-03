@@ -17,9 +17,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class CoursesFragment : Fragment() {
 
     private lateinit var binding: FragmentCoursesBinding
-
     private val viewModel: CoursesViewModel by viewModel<CoursesViewModel>()
-
     private var adapter: CoursesAdapter? = null
 
     override fun onCreateView(
@@ -51,7 +49,6 @@ class CoursesFragment : Fragment() {
                 }
             }
         )
-
         binding.recyclerView.adapter = adapter
     }
 
