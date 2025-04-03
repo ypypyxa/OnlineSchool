@@ -5,9 +5,9 @@ import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.pivnoydevelopment.onlineschool.common.domain.db.api.FavoritesCoursesInteractor
-import com.pivnoydevelopment.onlineschool.common.domain.network.api.CoursesInteractor
-import com.pivnoydevelopment.onlineschool.common.domain.models.Course
+import com.pivnoydevelopment.common.domain.db.api.FavoritesCoursesInteractor
+import com.pivnoydevelopment.common.domain.models.Course
+import com.pivnoydevelopment.common.domain.network.api.CoursesInteractor
 import com.pivnoydevelopment.onlineschool.common.utils.SingleLiveEvent
 import com.pivnoydevelopment.onlineschool.courses.ui.model.CoursesFragmentState
 import kotlinx.coroutines.launch

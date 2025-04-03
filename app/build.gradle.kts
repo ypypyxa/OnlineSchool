@@ -64,13 +64,6 @@ dependencies {
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
 
-    // Gson for JSON parsing
-    implementation(libs.gson)
-
-    // Retrofit for networking
-    implementation(libs.retrofit)
-    implementation(libs.retrofit2.converter.gson)
-
     // Dependency Injection with Koin
     implementation(libs.koin.android)
 
@@ -95,4 +88,10 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     kapt(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
+
+    // Retrofit for networking
+    implementation(libs.retrofit)
+    implementation(libs.retrofit2.converter.gson)
+
+    implementation(project(":common"))
 }

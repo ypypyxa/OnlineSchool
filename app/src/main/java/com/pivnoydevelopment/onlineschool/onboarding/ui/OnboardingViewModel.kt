@@ -3,8 +3,8 @@ package com.pivnoydevelopment.onlineschool.onboarding.ui
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.pivnoydevelopment.onlineschool.common.domain.storage.api.LoginInteractor
-import com.pivnoydevelopment.onlineschool.onboarding.model.Destination
+import com.pivnoydevelopment.common.domain.storage.api.LoginInteractor
+import com.pivnoydevelopment.onlineschool.onboarding.ui.model.Destination
 
 class OnboardingViewModel(private val loginInteractor: LoginInteractor) : ViewModel() {
 

@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.pivnoydevelopment.common.domain.models.Course
 import com.pivnoydevelopment.onlineschool.R
-import com.pivnoydevelopment.onlineschool.common.domain.models.Course
 import com.pivnoydevelopment.onlineschool.common.ui.CoursesAdapter
 import com.pivnoydevelopment.onlineschool.databinding.FragmentFavoritesBinding
 import com.pivnoydevelopment.onlineschool.favorites.ui.model.FavoritesFragmentState

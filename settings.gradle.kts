@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "OnlineSchool"
 include(":app")
+include(":common")

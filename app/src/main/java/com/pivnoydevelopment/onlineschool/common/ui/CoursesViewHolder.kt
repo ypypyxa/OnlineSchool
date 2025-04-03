@@ -7,8 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.pivnoydevelopment.onlineschool.R
-import com.pivnoydevelopment.onlineschool.common.domain.models.Course
-import com.pivnoydevelopment.onlineschool.common.utils.DateConverter
+import com.pivnoydevelopment.common.domain.models.Course
+import com.pivnoydevelopment.common.utils.DateConverter
 
 class CoursesViewHolder(
     parent: ViewGroup,
