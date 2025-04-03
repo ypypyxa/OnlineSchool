@@ -2,10 +2,13 @@ package com.pivnoydevelopment.onlineschool.di
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.pivnoydevelopment.onlineschool.common.data.NetworkClient
+import androidx.room.Room
+import com.pivnoydevelopment.onlineschool.common.data.network.NetworkClient
+import com.pivnoydevelopment.onlineschool.common.data.db.database.AppDatabase
 import com.pivnoydevelopment.onlineschool.common.data.network.GoogleDiskApi
-import com.pivnoydevelopment.onlineschool.common.data.network.RetrofitNetworkClient
+import com.pivnoydevelopment.onlineschool.common.data.network.impl.RetrofitNetworkClient
 import com.pivnoydevelopment.onlineschool.common.data.storage.LocalStorage
+import com.pivnoydevelopment.onlineschool.common.utils.DbConverter
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -32,5 +35,11 @@ val dataModule = module {
     single<NetworkClient> {
         RetrofitNetworkClient(get(), androidContext())
     }
+
+    single {
+        Room.databaseBuilder(androidContext(), AppDatabase::class.java, "database.db").build()
+    }
+
+    factory { DbConverter() }
 
 }

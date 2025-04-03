@@ -1,6 +1,7 @@
 package com.pivnoydevelopment.onlineschool.common.ui
 
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.pivnoydevelopment.onlineschool.common.domain.models.Course
 
@@ -18,6 +19,15 @@ class CoursesAdapter(private val clickListener: CoursesClickListener) : Recycler
     }
 
     override fun getItemCount(): Int = courses.size
+
+    fun updateList(newCourses: List<Course>) {
+        val diffCallback = CoursesDiffCallback(courses, newCourses)
+        val diffResult = DiffUtil.calculateDiff(diffCallback)
+
+        courses.clear()
+        courses.addAll(newCourses)
+        diffResult.dispatchUpdatesTo(this)
+    }
 
     interface CoursesClickListener {
         fun onDetailsClick()

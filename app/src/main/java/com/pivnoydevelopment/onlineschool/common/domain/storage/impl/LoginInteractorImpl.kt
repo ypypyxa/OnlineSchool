@@ -1,7 +1,7 @@
-package com.pivnoydevelopment.onlineschool.common.domain.impl
+package com.pivnoydevelopment.onlineschool.common.domain.storage.impl
 
-import com.pivnoydevelopment.onlineschool.common.domain.api.LoginInteractor
-import com.pivnoydevelopment.onlineschool.common.domain.api.LoginRepository
+import com.pivnoydevelopment.onlineschool.common.domain.storage.api.LoginInteractor
+import com.pivnoydevelopment.onlineschool.common.domain.storage.api.LoginRepository
 
 class LoginInteractorImpl(private val repository: LoginRepository) : LoginInteractor {
 

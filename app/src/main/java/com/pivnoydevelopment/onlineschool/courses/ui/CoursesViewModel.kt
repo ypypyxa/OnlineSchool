@@ -5,7 +5,8 @@ import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.pivnoydevelopment.onlineschool.common.domain.api.CoursesInteractor
+import com.pivnoydevelopment.onlineschool.common.domain.db.api.FavoritesCoursesInteractor
+import com.pivnoydevelopment.onlineschool.common.domain.network.api.CoursesInteractor
 import com.pivnoydevelopment.onlineschool.common.domain.models.Course
 import com.pivnoydevelopment.onlineschool.common.utils.SingleLiveEvent
 import com.pivnoydevelopment.onlineschool.courses.ui.model.CoursesFragmentState
@@ -13,9 +14,11 @@ import kotlinx.coroutines.launch
 
 class CoursesViewModel(
     private val coursesInteractor: CoursesInteractor,
+    private val favoritesInteractor: FavoritesCoursesInteractor
 ) : ViewModel() {
 
     private var courses = listOf<Course>()
+    private var isCoursesLoaded = false
 
     private val _showToast = SingleLiveEvent<String>()
     fun observeShowToast(): LiveData<String> = _showToast
@@ -37,6 +40,7 @@ class CoursesViewModel(
 
     init {
         loadCourses()
+        observeFavoritesUpdates()
     }
 
     fun sort() {
@@ -71,30 +75,54 @@ class CoursesViewModel(
 
         when {
             errorMessage != null -> {
-                renderState(
-                    CoursesFragmentState.Error(
-                        errorMessage = "ошибка" // context.getString(R.string.something_went_wrong)
-                    )
-                )
+                renderState(CoursesFragmentState.Error("ошибка"))
                 _showToast.postValue(errorMessage!!)
             }
 
             courses.isEmpty() -> {
-                renderState(
-                    CoursesFragmentState.Empty(
-                        message = "пусто" // context.getString(R.string.nothing_found)
-                    )
-                )
+                renderState(CoursesFragmentState.Empty("пусто"))
             }
 
             else -> {
+                isCoursesLoaded = true
                 this.courses = courses
-                renderState(
-                    CoursesFragmentState.Content(
-                        courses = courses
-                    )
-                )
+                renderState(CoursesFragmentState.Content(courses))
             }
+        }
+    }
+
+    private fun observeFavoritesUpdates() {
+        viewModelScope.launch {
+            favoritesInteractor.loadCourses().collect { favorites ->
+                val favoriteIds = favorites.map { it.id }.toSet()
+                courses = courses.map { course ->
+                    course.copy(hasLike = course.id in favoriteIds)
+                }
+
+                if (isCoursesLoaded) {
+                    renderState(CoursesFragmentState.Content(courses))
+                }
+            }
+        }
+    }
+
+    fun onFavoriteToggleClick(course: Course) {
+        if (course.hasLike) {
+            removeFromFavorites(course)
+        } else {
+            addToFavorites(course)
+        }
+    }
+
+    private fun addToFavorites(course: Course) {
+        viewModelScope.launch {
+            favoritesInteractor.addCourse(course)
+        }
+    }
+
+    private fun removeFromFavorites(course: Course) {
+        viewModelScope.launch {
+            favoritesInteractor.deleteCourse(course)
         }
     }
 }

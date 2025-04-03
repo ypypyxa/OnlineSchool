@@ -1,7 +1,6 @@
-package com.pivnoydevelopment.onlineschool.common.data
+package com.pivnoydevelopment.onlineschool.common.data.storage
 
-import com.pivnoydevelopment.onlineschool.common.data.storage.LocalStorage
-import com.pivnoydevelopment.onlineschool.common.domain.api.LoginRepository
+import com.pivnoydevelopment.onlineschool.common.domain.storage.api.LoginRepository
 
 class LoginRepositoryImpl(private val localStorage: LocalStorage) : LoginRepository {
 

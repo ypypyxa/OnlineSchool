@@ -1,7 +1,7 @@
-package com.pivnoydevelopment.onlineschool.common.domain.impl
+package com.pivnoydevelopment.onlineschool.common.domain.network.impl
 
-import com.pivnoydevelopment.onlineschool.common.domain.api.CoursesInteractor
-import com.pivnoydevelopment.onlineschool.common.domain.api.CoursesRepository
+import com.pivnoydevelopment.onlineschool.common.domain.network.api.CoursesInteractor
+import com.pivnoydevelopment.onlineschool.common.domain.network.api.CoursesRepository
 import com.pivnoydevelopment.onlineschool.common.domain.models.Course
 import com.pivnoydevelopment.onlineschool.common.utils.Resource
 import kotlinx.coroutines.flow.Flow
