@@ -17,9 +17,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class CoursesFragment : Fragment() {
 
     private lateinit var binding: FragmentCoursesBinding
-
     private val viewModel: CoursesViewModel by viewModel<CoursesViewModel>()
-
     private var adapter: CoursesAdapter? = null
 
     override fun onCreateView(
@@ -47,11 +45,10 @@ class CoursesFragment : Fragment() {
                 }
 
                 override fun onFavoriteToggleClick(course: Course) {
-                    TODO("Not yet implemented")
+                    viewModel.onFavoriteToggleClick(course)
                 }
             }
         )
-
         binding.recyclerView.adapter = adapter
     }
 
@@ -108,15 +105,11 @@ class CoursesFragment : Fragment() {
         binding.progressBar.visibility = View.GONE
         binding.sortButton.isEnabled = true
 
-        adapter?.courses?.clear()
-        adapter?.courses?.addAll(courses)
-        adapter?.notifyDataSetChanged()
+        adapter?.updateList(courses)
     }
 
     fun sort(courses: List<Course>) {
-        adapter?.courses?.clear()
-        adapter?.courses?.addAll(courses)
-        adapter?.notifyDataSetChanged()
+        adapter?.updateList(courses)
     }
 
     private fun showDialog() {

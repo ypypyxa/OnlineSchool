@@ -1,11 +1,12 @@
-package com.pivnoydevelopment.onlineschool.common.data.network
+package com.pivnoydevelopment.onlineschool.common.data.network.impl
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import com.pivnoydevelopment.onlineschool.common.data.NetworkClient
-import com.pivnoydevelopment.onlineschool.common.data.dto.CoursesRequest
-import com.pivnoydevelopment.onlineschool.common.data.dto.Response
+import com.pivnoydevelopment.onlineschool.common.data.network.GoogleDiskApi
+import com.pivnoydevelopment.onlineschool.common.data.network.NetworkClient
+import com.pivnoydevelopment.onlineschool.common.data.network.dto.CoursesRequest
+import com.pivnoydevelopment.onlineschool.common.data.network.dto.Response
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

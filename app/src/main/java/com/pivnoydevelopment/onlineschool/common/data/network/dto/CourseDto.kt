@@ -1,4 +1,4 @@
-package com.pivnoydevelopment.onlineschool.common.data.dto
+package com.pivnoydevelopment.onlineschool.common.data.network.dto
 
 data class CourseDto(
     val id: Int,

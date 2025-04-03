@@ -1,14 +1,19 @@
-package com.pivnoydevelopment.onlineschool.common.data
+package com.pivnoydevelopment.onlineschool.common.data.network.impl
 
-import com.pivnoydevelopment.onlineschool.common.data.dto.CoursesRequest
-import com.pivnoydevelopment.onlineschool.common.data.dto.CoursesResponse
-import com.pivnoydevelopment.onlineschool.common.domain.api.CoursesRepository
+import com.pivnoydevelopment.onlineschool.common.data.network.NetworkClient
+import com.pivnoydevelopment.onlineschool.common.data.network.dto.CoursesRequest
+import com.pivnoydevelopment.onlineschool.common.data.network.dto.CoursesResponse
+import com.pivnoydevelopment.onlineschool.common.domain.db.api.FavoritesCoursesInteractor
+import com.pivnoydevelopment.onlineschool.common.domain.network.api.CoursesRepository
 import com.pivnoydevelopment.onlineschool.common.domain.models.Course
 import com.pivnoydevelopment.onlineschool.common.utils.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-class CoursesRepositoryImpl(private val networkClient: NetworkClient) : CoursesRepository {
+class CoursesRepositoryImpl(
+    private val networkClient: NetworkClient,
+    private val favorites : FavoritesCoursesInteractor
+) : CoursesRepository {
 
     override fun fetchCourses(id: String): Flow<Resource<List<Course>>> = flow {
         val response = networkClient.doRequest(CoursesRequest(id))
@@ -17,7 +22,7 @@ class CoursesRepositoryImpl(private val networkClient: NetworkClient) : CoursesR
                 emit(Resource.Error("Проверьте подключение к интернету"))
             }
             200 -> {
-//                val stored = localStorage.getSavedFavorites()
+                val storedIds = favorites.loadCoursesOnce().map { it.id }
                 with (response as CoursesResponse) {
                     val data = courses.map {
                         Course(
@@ -27,12 +32,10 @@ class CoursesRepositoryImpl(private val networkClient: NetworkClient) : CoursesR
                             price = it.price,
                             rate = it.rate,
                             startDate = it.startDate,
-                            hasLike = it.hasLike,
+                            hasLike = storedIds.contains(it.id), //it.hasLike,
                             publishDate = it.publishDate
-//                            inFavorite = stored.contains(it.id)
                         )
                     }
-                    //сохраняем список фильмов в базу данных
                     emit(Resource.Success(data))
                 }
             }
@@ -41,14 +44,4 @@ class CoursesRepositoryImpl(private val networkClient: NetworkClient) : CoursesR
             }
         }
     }
-
-/*
-    override fun addMovieToFavorites(course: Course) {
-        localStorage.addToFavorites(course.id)
-    }
-
-    override fun removeMovieFromFavorites(course: Course) {
-        localStorage.removeFromFavorites(course.id)
-    }
-*/
 }

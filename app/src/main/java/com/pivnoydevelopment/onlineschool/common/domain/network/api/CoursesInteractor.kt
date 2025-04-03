@@ -1,4 +1,4 @@
-package com.pivnoydevelopment.onlineschool.common.domain.api
+package com.pivnoydevelopment.onlineschool.common.domain.network.api
 
 import com.pivnoydevelopment.onlineschool.common.domain.models.Course
 import kotlinx.coroutines.flow.Flow
