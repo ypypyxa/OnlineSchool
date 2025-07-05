@@ -43,7 +43,7 @@
   - [https://vk.com/](https://vk.com/)
   - [https://ok.ru/](https://ok.ru/)
 
-<img src="https://iili.io/35VLwR2.md.png" width="300">
+<img src="https://iili.io/35VLwR2.png" width="300">
 
 ### Главный экран
 - Курсы сортируются по дате публикации по убыванию (кнопка сортировки)
